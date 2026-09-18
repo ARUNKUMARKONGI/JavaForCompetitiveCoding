@@ -136,10 +136,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 👉 <strong>Rule:</strong> In competitive coding, understand when to use <code>ArrayList</code>, <code>HashSet</code>, <code>LinkedHashSet</code>, <code>TreeSet</code>, <code>HashMap</code>, <code>LinkedHashMap</code>, and <code>TreeMap</code> based on ordering, uniqueness, sorting, and time-complexity requirements.
 </p>
 
-<br>
-
 <h3>Key Collections at a Glance</h3>
-
 <ul>
   <li><strong>ArrayList</strong> → Ordered + duplicates allowed + index-based access</li>
   <li><strong>HashSet</strong> → Unique elements + no guaranteed order</li>
@@ -149,7 +146,6 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li><strong>LinkedHashMap</strong> → Key-value pairs + insertion order</li>
   <li><strong>TreeMap</strong> → Key-value pairs + sorted keys + <code>O(log n)</code></li>
 </ul>
-
 <br>
 <h3>Reference Diagram <em>(Click image to view/download full resolution)</em></h3>
 <a href="./images/Collections.png" target="_blank">
