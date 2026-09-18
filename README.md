@@ -107,7 +107,7 @@
 ---
 
 <details>
-<summary><h2 style="display:inline;">Java Collections Framework</h2></summary>
+<summary><h2 style="display:inline;">🧰 Java Collections Framework</h2></summary>
 <br>
 
 <p>
