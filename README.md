@@ -144,7 +144,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li><strong>ArrayList</strong> → Ordered + duplicates allowed + index-based access</li>
   <li><strong>HashSet</strong> → Unique elements + no guaranteed order</li>
   <li><strong>LinkedHashSet</strong> → Unique elements + insertion order</li>
-  <li><strong>TreeSet</strong> → Unique elements + sorted order</li>
+  <li><strong>TreeSet</strong> → Unique elements + sorted order+ <code>O(log n)</li>
   <li><strong>HashMap</strong> → Key-value pairs + no guaranteed order + average <code>O(1)</code></li>
   <li><strong>LinkedHashMap</strong> → Key-value pairs + insertion order</li>
   <li><strong>TreeMap</strong> → Key-value pairs + sorted keys + <code>O(log n)</code></li>
