@@ -156,8 +156,8 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 ---
 
-<a href="./images/JavaCollectionsFramework.png" target="_blank">
-  <img src="./images/JavaCollectionsFramework.png" alt="Java Collections Framework Important Classes" style="max-width:100%; height:auto; display:block; margin:10px 0;"/>
+<a href="./images/Collections.png" target="_blank">
+  <img src="./images/Collections.png" alt="Java Collections Framework Important Classes" style="max-width:100%; height:auto; display:block; margin:10px 0;"/>
 </a>
 
 </details>
