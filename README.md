@@ -103,3 +103,65 @@
 </a>
 
 </details>
+
+---
+
+<details>
+<summary><h2 style="display:inline;">Java Collections Framework</h2></summary>
+<br>
+
+<p>
+The Java Collections Framework provides a set of interfaces and classes for storing, organizing, and manipulating groups of objects efficiently. It is essential for competitive coding because it provides ready-to-use data structures with optimized operations.
+</p>
+
+<ul>
+  <li>⚡ <strong>Dynamic Storage</strong> — Collections can grow and shrink dynamically, unlike fixed-size arrays.</li>
+
+  <li>🔑 <strong>Fast Data Access</strong> — Hash-based collections such as <code>HashSet</code> and <code>HashMap</code> provide average <code>O(1)</code> time for common operations.</li>
+
+  <li>🔄 <strong>Maintain Order</strong> — <code>ArrayList</code> and <code>LinkedHashSet</code>/<code>LinkedHashMap</code> can maintain insertion order.</li>
+
+  <li>🎯 <strong>Unique Elements</strong> — <code>HashSet</code>, <code>LinkedHashSet</code>, and <code>TreeSet</code> automatically prevent duplicate elements.</li>
+
+  <li>🔢 <strong>Key-Value Storage</strong> — <code>HashMap</code>, <code>LinkedHashMap</code>, and <code>TreeMap</code> store data in key-value pairs with unique keys.</li>
+
+  <li>📈 <strong>Sorted Data</strong> — <code>TreeSet</code> and <code>TreeMap</code> maintain elements/keys in sorted order using a Red-Black Tree.</li>
+
+  <li>🧩 <strong>Ready-to-Use Methods</strong> — Methods such as <code>add()</code>, <code>remove()</code>, <code>contains()</code>, <code>put()</code>, <code>get()</code>, and <code>containsKey()</code> simplify problem solving.</li>
+
+  <li>🚀 <strong>Efficient Problem Solving</strong> — Collections are widely used for frequency counting, duplicate detection, grouping, searching, sorting, and maintaining relationships between data.</li>
+</ul>
+
+<p>
+👉 <strong>Rule:</strong> In competitive coding, understand when to use <code>ArrayList</code>, <code>HashSet</code>, <code>LinkedHashSet</code>, <code>TreeSet</code>, <code>HashMap</code>, <code>LinkedHashMap</code>, and <code>TreeMap</code> based on ordering, uniqueness, sorting, and time-complexity requirements.
+</p>
+
+<br>
+
+<h3>Key Collections at a Glance</h3>
+
+<ul>
+  <li><strong>ArrayList</strong> → Ordered + duplicates allowed + index-based access</li>
+  <li><strong>HashSet</strong> → Unique elements + no guaranteed order</li>
+  <li><strong>LinkedHashSet</strong> → Unique elements + insertion order</li>
+  <li><strong>TreeSet</strong> → Unique elements + sorted order</li>
+  <li><strong>HashMap</strong> → Key-value pairs + no guaranteed order + average <code>O(1)</code></li>
+  <li><strong>LinkedHashMap</strong> → Key-value pairs + insertion order</li>
+  <li><strong>TreeMap</strong> → Key-value pairs + sorted keys + <code>O(log n)</code></li>
+</ul>
+
+<br>
+
+<h3>Reference Diagram <em>(Click image to view/download full resolution)</em></h3>
+
+---
+
+<a href="./images/JavaCollectionsFramework.png" target="_blank">
+  <img src="./images/JavaCollectionsFramework.png" alt="Java Collections Framework Important Classes" style="max-width:100%; height:auto; display:block; margin:10px 0;"/>
+</a>
+
+</details>
+
+
+
+
