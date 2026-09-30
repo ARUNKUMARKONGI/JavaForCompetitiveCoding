@@ -1251,7 +1251,7 @@ factorial(3)</code></pre>
 </p>
 
 
-<h3>🧠 Recursion in Competitive Programming</h3>
+<h3>Recursion in Competitive Programming</h3>
 
 <p>Recursion is commonly used for:</p>
 
@@ -1306,11 +1306,11 @@ factorial(3)</code></pre>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
   <li style="margin-bottom:6px;">
-    🔹 <strong>Time:</strong> <code>O(n)</code>
+    <strong>Time:</strong> <code>O(n)</code>
   </li>
 
   <li style="margin-bottom:6px;">
-    🔹 <strong>Auxiliary Space:</strong> <code>O(n)</code> due to the call stack.
+    <strong>Auxiliary Space:</strong> <code>O(n)</code> due to the call stack.
   </li>
 </ul>
 
