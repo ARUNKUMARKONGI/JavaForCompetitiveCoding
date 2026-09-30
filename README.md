@@ -193,7 +193,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 
 <details> 
-<summary><h2 style="display:inline;">🧩 Subarray, Subsequence and Subset</h2></summary> 
+<summary><h2 style="display:inline;">🧱 Subarray, Subsequence and Subset</h2></summary> 
   <br> 
 
 <p><strong>Subarray, subsequence, and subset</strong> are fundamental concepts in competitive programming. Understanding the difference between them is important because the techniques and algorithms used to solve problems can be very different.</p> 
@@ -201,17 +201,17 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <p>For competitive coding, understanding these concepts helps you:</p> 
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
-  <li style="margin-bottom:4px;">🧩 <strong>Identify the correct problem type</strong> — determine whether the problem is asking for a subarray, subsequence, or subset.</li> 
-  <li style="margin-bottom:4px;">⚡ <strong>Choose the right technique</strong> — such as Sliding Window, Two Pointers, Prefix Sum, Binary Search, Dynamic Programming, or Backtracking.</li> 
-  <li style="margin-bottom:4px;">🎯 <strong>Understand ordering requirements</strong> — know when elements must remain contiguous or preserve their original order.</li> 
-  <li style="margin-bottom:4px;">🚀 <strong>Optimize solutions</strong> — avoid generating all possible combinations when an efficient approach is available.</li> 
-  <li style="margin-bottom:4px;">🧠 <strong>Recognize common patterns</strong> — many array and string problems are based on these three concepts.</li> 
+  <li style="margin-bottom:4px;">🧩 <strong>Identify the correct problem type</strong> determine whether the problem is asking for a subarray, subsequence, or subset.</li> 
+  <li style="margin-bottom:4px;">⚡ <strong>Choose the right technique</strong> such as Sliding Window, Two Pointers, Prefix Sum, Binary Search, Dynamic Programming, or Backtracking.</li> 
+  <li style="margin-bottom:4px;">🎯 <strong>Understand ordering requirements</strong> know when elements must remain contiguous or preserve their original order.</li> 
+  <li style="margin-bottom:4px;">🚀 <strong>Optimize solutions</strong> avoid generating all possible combinations when an efficient approach is available.</li> 
+  <li style="margin-bottom:4px;">🧠 <strong>Recognize common patterns</strong> many array and string problems are based on these three concepts.</li> 
 </ul> 
 
 
 <!-- ==================== SUBARRAY ==================== -->
 
-<h3>📏 Subarray</h3>
+<h3>Subarray</h3>
 
 <p>A <strong>subarray</strong> is a contiguous part of an array. All elements between the starting and ending positions are included.</p>
 
@@ -223,14 +223,14 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 <p>All possible <strong>non-empty subarrays</strong> are:</p>
 
-<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;">
+<ol style="margin-top:0; margin-bottom:12px; padding-left:20px;">
   <li><code>[1]</code></li>
   <li><code>[2]</code></li>
   <li><code>[3]</code></li>
   <li><code>[1, 2]</code></li>
   <li><code>[2, 3]</code></li>
   <li><code>[1, 2, 3]</code></li>
-</ul>
+</ol>
 
 <p>Notice that <code>[1, 3]</code> is <strong>not</strong> a subarray because <code>1</code> and <code>3</code> are not contiguous.</p>
 
@@ -249,18 +249,18 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <p><strong>Common techniques:</strong></p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
-  <li>🔹 Prefix Sum</li>
-  <li>🔹 Sliding Window</li>
-  <li>🔹 Two Pointers</li>
-  <li>🔹 Kadane's Algorithm</li>
-  <li>🔹 Binary Search on Answer</li>
-  <li>🔹 Monotonic Queue / Deque</li>
+  <li>Prefix Sum</li>
+  <li>Sliding Window</li>
+  <li>Two Pointers</li>
+  <li>Kadane's Algorithm</li>
+  <li>Binary Search</li>
+  <li>Monotonic Queue / Deque</li>
 </ul>
 
 
 <!-- ==================== SUBSEQUENCE ==================== -->
 
-<h3>🔄 Subsequence</h3>
+<h3>Subsequence</h3>
 
 <p>A <strong>subsequence</strong> is obtained by deleting zero or more elements from an array while maintaining the relative order of the remaining elements.</p>
 
@@ -272,7 +272,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 <p>All possible <strong>subsequences</strong> are:</p>
 
-<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;">
+<ol style="margin-top:0; margin-bottom:12px; padding-left:20px;">
   <li><code>[]</code></li>
   <li><code>[1]</code></li>
   <li><code>[2]</code></li>
@@ -281,7 +281,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li><code>[1, 3]</code></li>
   <li><code>[2, 3]</code></li>
   <li><code>[1, 2, 3]</code></li>
-</ul>
+</ol>
 
 <p>Notice that <code>[1, 3]</code> is a valid subsequence even though the elements are not contiguous.</p>
 
@@ -308,18 +308,18 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <p><strong>Common techniques:</strong></p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
-  <li>🔹 Dynamic Programming</li>
-  <li>🔹 Two Pointers</li>
-  <li>🔹 Greedy</li>
-  <li>🔹 Binary Search</li>
-  <li>🔹 Recursion / Backtracking</li>
-  <li>🔹 Bit Manipulation</li>
+  <li>Dynamic Programming</li>
+  <li>Two Pointers</li>
+  <li>Greedy</li>
+  <li>Binary Search</li>
+  <li>Recursion / Backtracking</li>
+  <li>Bit Manipulation</li>
 </ul>
 
 
 <!-- ==================== SUBSET ==================== -->
 
-<h3>🧩 Subset</h3>
+<h3>Subset</h3>
 
 <p>A <strong>subset</strong> is a collection of elements selected from a set where the order of elements does not matter.</p>
 
@@ -331,7 +331,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 <p>All possible <strong>subsets</strong> are:</p>
 
-<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;">
+<ol style="margin-top:0; margin-bottom:12px; padding-left:20px;">
   <li><code>{}</code></li>
   <li><code>{1}</code></li>
   <li><code>{2}</code></li>
@@ -340,7 +340,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li><code>{1, 3}</code></li>
   <li><code>{2, 3}</code></li>
   <li><code>{1, 2, 3}</code></li>
-</ul>
+</ol>
 
 <p>In a subset, <code>{1, 3}</code> and <code>{3, 1}</code> represent the <strong>same subset</strong> because order does not matter.</p>
 
@@ -356,25 +356,16 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <strong>2<sup>3</sup> = 8</strong>
 </p>
 
-<p>If the empty subset is excluded:</p>
-
-<p style="text-align:center;">
-  <strong>2<sup>n</sup> − 1 = 7</strong>
-</p>
-
 <p><strong>Common techniques:</strong></p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
-  <li>🔹 Bit Manipulation</li>
-  <li>🔹 Recursion / Backtracking</li>
-  <li>🔹 Dynamic Programming</li>
-  <li>🔹 Bitmasking</li>
+  <li>Bit Manipulation</li>
+  <li>Recursion / Backtracking</li>
+  <li>Dynamic Programming</li>
+  <li>Bitmasking</li>
 </ul>
 
 
-
 <p>👉 <strong>Rule:</strong> First identify whether the problem deals with a <strong>subarray, subsequence, or subset</strong>. Then choose the technique based on whether elements must be contiguous, whether their order matters, and the constraints on <em>n</em>.</p>
-
-
 
 </details>
