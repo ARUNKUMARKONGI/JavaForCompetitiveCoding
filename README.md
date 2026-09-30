@@ -1,6 +1,6 @@
 <details>
 <meta name="google-site-verification" content="A15hghSg-FVv1AkZxRY9xrm3MW-vENzOoi7ZMPfStmw" />
-<summary><h2 style="display:inline;">🔣 Data Types, Conditional Stmts, Operators and Loops</h2></summary>
+<summary><h3 style="display:inline;">🔣 Data Types, Conditional Stmts, Operators and Loops</h3></summary>
   <br>
 <p>Data types are important because they determine what kind of data you can store, how much memory it uses, and what range of values it can handle.</p>
 <p>For competitive coding, choosing the correct data type helps you:</p>
@@ -21,7 +21,7 @@
 <hr>
 
 <details>
-<summary><h2 style="display:inline;">🔄 Typecasting & Data Conversions</h2></summary>
+<summary><h3 style="display:inline;">🔄 Typecasting & Data Conversions</h3></summary>
   <br>
 <p>In Java, <strong>Typecasting</strong> is the process of converting a value from one data type to another. Mastering both <strong>Implicit (Widening)</strong> and <strong>Explicit (Narrowing)</strong> conversions is essential for mathematical accuracy, preventing hidden logic bugs, and avoiding runtime errors.</p>
 <h3>Why Data Conversions Matter in Competitive Coding & Math</h3>
