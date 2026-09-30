@@ -1,4 +1,5 @@
 <details>
+<meta name="google-site-verification" content="A15hghSg-FVv1AkZxRY9xrm3MW-vENzOoi7ZMPfStmw" />
 <summary><h2 style="display:inline;">🔣 Data Types, Conditional Stmts, Operators and Loops</h2></summary>
   <br>
 <p>Data types are important because they determine what kind of data you can store, how much memory it uses, and what range of values it can handle.</p>
