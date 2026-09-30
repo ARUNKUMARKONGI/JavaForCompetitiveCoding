@@ -1314,6 +1314,834 @@ factorial(3)</code></pre>
   and understand how the current answer is built from the recursive result.
 </p>
 
+</details>
+
+<hr>
+
+
+<details>
+<summary><h2 style="display:inline;">🔢 Bit Manipulation Basics and Techniques</h2></summary>
+<br>
+
+<h3>📌 What is Bit Manipulation?</h3>
+
+<p>
+<strong>Bit Manipulation</strong> is the technique of directly working with the individual
+bits of an integer using bitwise operators.
+Since integers are stored in binary form, bit manipulation allows us to perform
+many operations efficiently.
+</p>
+
+<p>
+For example:
+</p>
+
+<pre><code>5 = 101
+3 = 011</code></pre>
+
+<p>
+Bitwise operations work directly on these binary representations.
+</p>
+
+<hr>
+
+<h3>⚙️ Bitwise Operators in Java</h3>
+
+<table>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td><code>&amp;</code></td>
+<td>AND</td>
+<td><code>5 &amp; 3</code></td>
+<td><code>1</code></td>
+<td>1 only when both bits are 1</td>
+</tr>
+
+<tr>
+<td><code>|</code></td>
+<td>OR</td>
+<td><code>5 | 3</code></td>
+<td><code>7</code></td>
+<td>1 when at least one bit is 1</td>
+</tr>
+
+<tr>
+<td><code>^</code></td>
+<td>XOR</td>
+<td><code>5 ^ 3</code></td>
+<td><code>6</code></td>
+<td>1 when bits are different</td>
+</tr>
+
+<tr>
+<td><code>~</code></td>
+<td>NOT</td>
+<td><code>~5</code></td>
+<td><code>-6</code></td>
+<td>Flips every bit</td>
+</tr>
+
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>Left Shift</td>
+<td><code>5 &lt;&lt; 1</code></td>
+<td><code>10</code></td>
+<td>Shifts bits to the left</td>
+</tr>
+
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Signed Right Shift</td>
+<td><code>5 &gt;&gt; 1</code></td>
+<td><code>2</code></td>
+<td>Shifts bits right while preserving sign</td>
+</tr>
+
+<tr>
+<td><code>&gt;&gt;&gt;</code></td>
+<td>Unsigned Right Shift</td>
+<td><code>5 &gt;&gt;&gt; 1</code></td>
+<td><code>2</code></td>
+<td>Shifts bits right and fills with 0</td>
+</tr>
+</table>
+
+<hr>
+
+<h3>🧮 Binary Representation</h3>
+
+<p>
+Every integer can be represented using powers of 2.
+</p>
+
+<pre><code>13 = 1101
+
+13 = 1×2³ + 1×2² + 0×2¹ + 1×2⁰
+   = 8 + 4 + 0 + 1
+   = 13</code></pre>
+
+<p>
+For an integer <code>n</code>, the bit at position <code>i</code> represents:
+</p>
+
+<pre><code>2^i</code></pre>
+
+<p>
+Bit positions start from <strong>0</strong> at the rightmost bit.
+</p>
+
+<pre><code>13 = 1101
+     ↓↓↓↓
+Position
+     3210</code></pre>
+
+<hr>
+
+<h3>🔑 Important Bit Manipulation Formulas</h3>
+
+<h4>1️⃣ Check if the i-th Bit is Set</h4>
+
+<pre><code>(n &amp; (1 &lt;&lt; i)) != 0</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 13 = 1101
+
+Check bit 2:
+
+1 &lt;&lt; 2 = 0100
+
+  1101
+&amp; 0100
+-------
+  0100
+
+Result is non-zero → Bit 2 is SET</code></pre>
+
+<hr>
+
+<h4>2️⃣ Set the i-th Bit</h4>
+
+<p>
+Setting a bit means changing it to <code>1</code>.
+</p>
+
+<pre><code>n | (1 &lt;&lt; i)</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 1001
+i = 1
+
+1 &lt;&lt; 1 = 0010
+
+  1001
+| 0010
+-------
+  1011</code></pre>
+
+<hr>
+
+<h4>3️⃣ Clear the i-th Bit</h4>
+
+<p>
+Clearing a bit means changing it to <code>0</code>.
+</p>
+
+<pre><code>n &amp; ~(1 &lt;&lt; i)</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 1111
+i = 2
+
+1 &lt;&lt; 2 = 0100
+
+  1111
+&amp; 1011
+-------
+  1011</code></pre>
+
+<hr>
+
+<h4>4️⃣ Toggle the i-th Bit</h4>
+
+<p>
+Toggle changes:
+</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+<li><code>0 → 1</code></li>
+<li><code>1 → 0</code></li>
+</ul>
+
+<pre><code>n ^ (1 &lt;&lt; i)</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 1001
+i = 1
+
+  1001
+^ 0010
+-------
+  1011</code></pre>
+
+<hr>
+
+<h4>5️⃣ Remove the Lowest Set Bit</h4>
+
+<p>
+One of the most important bit tricks:
+</p>
+
+<pre><code>n &amp; (n - 1)</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n     = 101100
+n - 1 = 101011
+
+  101100
+&amp; 101011
+---------
+  101000</code></pre>
+
+<p>
+The rightmost <code>1</code> is removed.
+</p>
+
+<hr>
+
+<h4>6️⃣ Extract the Lowest Set Bit</h4>
+
+<pre><code>n &amp; -n</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 101100
+
+n &amp; -n
+
+= 000100</code></pre>
+
+<p>
+Therefore, <code>n &amp; -n</code> gives the value represented by the
+<strong>lowest set bit</strong>.
+</p>
+
+<hr>
+
+<h4>7️⃣ Check if a Number is Odd or Even</h4>
+
+<p>
+The rightmost bit determines whether a number is odd or even.
+</p>
+
+<pre><code>n &amp; 1</code></pre>
+
+<table>
+<tr>
+<th>Number</th>
+<th>Binary</th>
+<th>n &amp; 1</th>
+<th>Type</th>
+</tr>
+
+<tr>
+<td>5</td>
+<td>101</td>
+<td>1</td>
+<td>Odd</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>1000</td>
+<td>0</td>
+<td>Even</td>
+</tr>
+</table>
+
+<hr>
+
+<h4>8️⃣ Check if a Number is a Power of 2</h4>
+
+<p>
+A positive power of 2 contains exactly one set bit.
+</p>
+
+<pre><code>n &gt; 0 &amp;&amp; (n &amp; (n - 1)) == 0</code></pre>
+
+<p>
+Examples:
+</p>
+
+<pre><code>1  = 0001  → Power of 2
+2  = 0010  → Power of 2
+4  = 0100  → Power of 2
+8  = 1000  → Power of 2
+16 = 10000 → Power of 2
+
+12 = 1100 → Not a power of 2</code></pre>
+
+<hr>
+
+<h3>⚡ Shift Operators</h3>
+
+<h4>⬅️ Left Shift</h4>
+
+<pre><code>n &lt;&lt; k</code></pre>
+
+<p>
+For positive integers where overflow does not occur:
+</p>
+
+<pre><code>n &lt;&lt; k = n × 2^k</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>5 &lt;&lt; 2
+
+101 &lt;&lt; 2
+= 10100
+= 20</code></pre>
+
+<hr>
+
+<h4>➡️ Right Shift</h4>
+
+<pre><code>n &gt;&gt; k</code></pre>
+
+<p>
+For positive integers:
+</p>
+
+<pre><code>n &gt;&gt; k = floor(n / 2^k)</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>20 &gt;&gt; 2
+
+10100 &gt;&gt; 2
+= 00101
+= 5</code></pre>
+
+<hr>
+
+<h3>🔄 XOR Properties</h3>
+
+<p>
+XOR is one of the most important operators in competitive programming.
+</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+<li><code>a ^ a = 0</code></li>
+<li><code>a ^ 0 = a</code></li>
+<li><code>a ^ b = b ^ a</code> — Commutative</li>
+<li><code>(a ^ b) ^ c = a ^ (b ^ c)</code> — Associative</li>
+<li><code>a ^ b ^ a = b</code></li>
+</ul>
+
+<p>
+Example:
+</p>
+
+<pre><code>5 ^ 7 ^ 5
+
+= (5 ^ 5) ^ 7
+= 0 ^ 7
+= 7</code></pre>
+
+<p>
+The two occurrences of <code>5</code> cancel each other.
+</p>
+
+<hr>
+
+<h3>🎯 Technique 1: Count Set Bits</h3>
+
+<p>
+A <strong>set bit</strong> is a bit whose value is <code>1</code>.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>13 = 1101
+
+Set bits:
+1 + 0 + 1 + 1
+
+Number of set bits = 3</code></pre>
+
+<p>
+The important trick is:
+</p>
+
+<pre><code>n &amp; (n - 1)</code></pre>
+
+<p>
+which removes exactly one set bit.
+Therefore, repeatedly applying this operation allows us to count the number of set bits.
+</p>
+
+<hr>
+
+<h3>🧩 Technique 2: Find the Unique Element Using XOR</h3>
+
+<p>
+If every element appears exactly twice except one element, XOR can find the unique element.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>[4, 1, 2, 1, 2]
+
+4 ^ 1 ^ 2 ^ 1 ^ 2
+
+= 4 ^ (1 ^ 1) ^ (2 ^ 2)
+= 4 ^ 0 ^ 0
+= 4</code></pre>
+
+<p>
+The duplicate elements cancel because:
+</p>
+
+<pre><code>x ^ x = 0</code></pre>
+
+<hr>
+
+<h3>🔢 Technique 3: Generate All Subsets Using Bitmasking</h3>
+
+<p>
+For an array of <code>n</code> elements, the number of possible subsets is:
+</p>
+
+<pre><code>2^n</code></pre>
+
+<p>
+Each subset can be represented using an <strong>n-bit mask</strong>.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>arr = [10, 20, 30]</code></pre>
+
+<table>
+<tr>
+<th>Mask</th>
+<th>Selected Elements</th>
+</tr>
+
+<tr>
+<td>000</td>
+<td>{ }</td>
+</tr>
+
+<tr>
+<td>001</td>
+<td>{10}</td>
+</tr>
+
+<tr>
+<td>010</td>
+<td>{20}</td>
+</tr>
+
+<tr>
+<td>011</td>
+<td>{10, 20}</td>
+</tr>
+
+<tr>
+<td>100</td>
+<td>{30}</td>
+</tr>
+
+<tr>
+<td>101</td>
+<td>{10, 30}</td>
+</tr>
+
+<tr>
+<td>110</td>
+<td>{20, 30}</td>
+</tr>
+
+<tr>
+<td>111</td>
+<td>{10, 20, 30}</td>
+</tr>
+</table>
+
+<p>
+For example:
+</p>
+
+<pre><code>Mask = 101
+
+Bit 0 → 1 → Select 10
+Bit 1 → 0 → Don't select 20
+Bit 2 → 1 → Select 30
+
+Subset = {10, 30}</code></pre>
+
+<p>
+This technique is called <strong>Bitmasking</strong>.
+</p>
+
+<hr>
+
+<h3>🎲 Technique 4: Enumerate All Submasks</h3>
+
+<p>
+A mask can represent a set of selected elements.
+Sometimes we need to iterate through every subset of that mask.
+</p>
+
+<p>
+The important formula is:
+</p>
+
+<pre><code>sub = (sub - 1) &amp; mask</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>mask = 1110</code></pre>
+
+<p>
+Its non-zero submasks include:
+</p>
+
+<pre><code>1110
+1100
+1010
+1000
+0110
+0100
+0010
+0000</code></pre>
+
+<p>
+This technique is heavily used in:
+</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+<li>Bitmask DP</li>
+<li>Subset DP</li>
+<li>Meet in the Middle</li>
+<li>State compression</li>
+<li>Combinatorial problems</li>
+</ul>
+
+<hr>
+
+<h3>🧠 Technique 5: Check, Set, Clear and Toggle Bits</h3>
+
+<table>
+<tr>
+<th>Operation</th>
+<th>Formula</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>Check i-th bit</td>
+<td><code>(n &amp; (1 &lt;&lt; i)) != 0</code></td>
+<td>Check whether bit is 1</td>
+</tr>
+
+<tr>
+<td>Set i-th bit</td>
+<td><code>n | (1 &lt;&lt; i)</code></td>
+<td>Change bit to 1</td>
+</tr>
+
+<tr>
+<td>Clear i-th bit</td>
+<td><code>n &amp; ~(1 &lt;&lt; i)</code></td>
+<td>Change bit to 0</td>
+</tr>
+
+<tr>
+<td>Toggle i-th bit</td>
+<td><code>n ^ (1 &lt;&lt; i)</code></td>
+<td>Flip the bit</td>
+</tr>
+</table>
+
+<hr>
+
+<h3>🚀 Technique 6: Find the Lowest Set Bit</h3>
+
+<pre><code>n &amp; -n</code></pre>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 40
+
+40 = 101000
+
+Lowest set bit:
+       ↑
+101000
+   ↓
+001000
+
+Value = 8</code></pre>
+
+<p>
+This technique is useful in:
+</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+<li>Fenwick Tree</li>
+<li>Subset operations</li>
+<li>Bitmask algorithms</li>
+<li>Finding individual set bits</li>
+</ul>
+
+<hr>
+
+<h3>🔍 Technique 7: Remove Set Bits One by One</h3>
+
+<p>
+The formula:
+</p>
+
+<pre><code>n &amp; (n - 1)</code></pre>
+
+<p>
+removes the lowest set bit each time.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 101101
+
+Step 1:
+101101 → 101100
+
+Step 2:
+101100 → 101000
+
+Step 3:
+101000 → 100000
+
+Step 4:
+100000 → 000000</code></pre>
+
+<p>
+There were <strong>4 set bits</strong>.
+</p>
+
+<hr>
+
+<h3>💡 Sample Problem 1: Power of Two</h3>
+
+<p>
+<strong>Problem:</strong> Determine whether a number is a power of 2.
+</p>
+
+<p>
+Examples:
+</p>
+
+<pre><code>16 → Power of 2
+32 → Power of 2
+18 → Not a power of 2
+20 → Not a power of 2</code></pre>
+
+<p>
+Reason:
+</p>
+
+<pre><code>16 = 10000 → exactly one set bit
+32 = 100000 → exactly one set bit
+18 = 10010 → two set bits</code></pre>
+
+<hr>
+
+<h3>💡 Sample Problem 2: Single Number</h3>
+
+<p>
+<strong>Problem:</strong> Every number appears twice except one. Find the number
+that appears only once.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>Input:
+[2, 3, 2, 4, 4]
+
+XOR:
+2 ^ 3 ^ 2 ^ 4 ^ 4
+
+= 3
+
+Answer = 3</code></pre>
+
+<p>
+The duplicate values cancel each other.
+</p>
+
+<hr>
+
+<h3>💡 Sample Problem 3: Missing Number</h3>
+
+<p>
+<strong>Problem:</strong> An array contains numbers from <code>0</code> to <code>n</code>,
+with exactly one number missing.
+Find the missing number.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>Input:
+[3, 0, 1]
+
+Expected numbers:
+0, 1, 2, 3
+
+Present:
+0, 1, 3
+
+Missing:
+2</code></pre>
+
+<p>
+Using XOR:
+</p>
+
+<pre><code>0 ^ 1 ^ 2 ^ 3
+^ 3 ^ 0 ^ 1
+
+= 2</code></pre>
+
+<hr>
+
+<h3>💡 Sample Problem 4: Count Set Bits</h3>
+
+<p>
+<strong>Problem:</strong> Count the number of <code>1</code>s in the binary
+representation of a number.
+</p>
+
+<p>
+Example:
+</p>
+
+<pre><code>n = 13
+
+13 = 1101
+
+Set bits = 3</code></pre>
+
+<p>
+Using <code>n &amp; (n - 1)</code>:
+</p>
+
+<pre><code>1101
+1100
+1000
+0000
+
+Number of operations = 3</code></pre>
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
 
 
 
