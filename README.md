@@ -479,7 +479,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 </p>
 
 
-<h3>➕ Prefix Sum</h3>
+<h3>Prefix Sum</h3>
 
 <p>
   <strong>Prefix Sum</strong> is a technique used to preprocess an array so that
@@ -669,7 +669,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 </p>
 
 
-<h4>📐 General Range Formula</h4>
+<h4>General Range Formula</h4>
 
 <p>
   For a range <code>[l, r]</code>:
@@ -701,21 +701,6 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <p style="text-align:center;">
   <strong>Sum(0, 3) = prefix[3] = 10</strong>
 </p>
-
-
-<h4>⚡ Prefix Sum Construction</h4>
-
-<p>
-  The prefix array can be created in <strong>O(n)</strong> time:
-</p>
-
-<pre><code>int[] prefix = new int[arr.length];
-
-prefix[0] = arr[0];
-
-for (int i = 1; i &lt; arr.length; i++) {
-    prefix[i] = prefix[i - 1] + arr[i];
-}</code></pre>
 
 <p>
   After preprocessing, each range-sum query can be answered in
