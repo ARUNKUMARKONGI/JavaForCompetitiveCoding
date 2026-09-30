@@ -456,10 +456,10 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <p><strong>Common types:</strong></p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
-  <li>🔹 Fixed-size Sliding Window</li>
-  <li>🔹 Variable-size Sliding Window</li>
-  <li>🔹 Sliding Window with Frequency Map</li>
-  <li>🔹 Sliding Window with Two Pointers</li>
+  <li>Fixed-size Sliding Window</li>
+  <li>Variable-size Sliding Window</li>
+  <li>Sliding Window with Frequency Map</li>
+  <li>Sliding Window with Two Pointers</li>
 </ul>
 
 <p><strong>Common problems:</strong></p>
@@ -725,10 +725,10 @@ for (int i = 1; i &lt; arr.length; i++) {
 <p><strong>Common applications:</strong></p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
-  <li>🔹 Range Sum Queries</li>
-  <li>🔹 Subarray Sum Problems</li>
-  <li>🔹 Prefix Sum + HashMap</li>
-  <li>🔹 Counting elements in a range</li>
+  <li>Range Sum Queries</li>
+  <li>Subarray Sum Problems</li>
+  <li>Prefix Sum + HashMap</li>
+  <li>Counting elements in a range</li>
 </ul>
 
 
@@ -788,12 +788,12 @@ for (int i = 1; i &lt; arr.length; i++) {
 <p><strong>Common patterns:</strong></p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
-  <li>🔹 Opposite-direction pointers</li>
-  <li>🔹 Same-direction pointers</li>
-  <li>🔹 Fast and Slow pointers</li>
-  <li>🔹 Two pointers for sorted arrays</li>
-  <li>🔹 Two pointers for removing duplicates</li>
-  <li>🔹 Two pointers for partitioning</li>
+  <li>Opposite-direction pointers</li>
+  <li>Same-direction pointers</li>
+  <li>Fast and Slow pointers</li>
+  <li>Two pointers for sorted arrays</li>
+  <li>Two pointers for removing duplicates</li>
+  <li>Two pointers for partitioning</li>
 </ul>
 
 <p><strong>Common problems:</strong></p>
@@ -834,13 +834,6 @@ for (int i = 1; i &lt; arr.length; i++) {
   </li>
 </ul>
 
-
-<p>
-  👉 <strong>Rule:</strong> First identify whether the problem involves a
-  <strong>contiguous window</strong>, <strong>cumulative information</strong>,
-  or <strong>multiple pointers</strong>. Then choose the technique that avoids
-  unnecessary repeated work.
-</p>
 
 
 </details>
