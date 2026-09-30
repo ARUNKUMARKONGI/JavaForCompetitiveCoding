@@ -1320,7 +1320,7 @@ factorial(3)</code></pre>
 
 
 <details>
-<summary><h3 style="display:inline;">0️⃣1️⃣ Bit Manipulation</h3></summary>
+<summary><h3 style="display:inline;">🔀 Bit Manipulation</h3></summary>
 <br>
 
 <h3>What is Bit Manipulation?</h3>
