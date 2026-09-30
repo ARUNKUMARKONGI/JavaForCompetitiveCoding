@@ -193,10 +193,10 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 
 <details> 
-<summary><h2 style="display:inline;">🧱 Subarray, Subsequence and Subset</h2></summary> 
+<summary><h2 style="display:inline;">🧩 Subarray, Subsequence and Subset</h2></summary> 
   <br> 
 
-<p><strong>Subarray, subsequence, and subset</strong> are fundamental concepts in competitive programming. Understanding the difference between them is important because the techniques and algorithms used to solve problems can be very different.</p>
+<p><strong>Subarray, subsequence, and subset</strong> are fundamental concepts in competitive programming. Understanding the difference between them is important because the techniques and algorithms used to solve problems can be very different.</p> 
 
 <p>For competitive coding, understanding these concepts helps you:</p> 
 
@@ -208,16 +208,42 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li style="margin-bottom:4px;">🧠 <strong>Recognize common patterns</strong> — many array and string problems are based on these three concepts.</li> 
 </ul> 
 
-<h3>📌 Subarray</h3>
+
+<!-- ==================== SUBARRAY ==================== -->
+
+<h3>📏 Subarray</h3>
 
 <p>A <strong>subarray</strong> is a contiguous part of an array. All elements between the starting and ending positions are included.</p>
 
-<p><strong>Example:</strong> For the array <code>[1, 2, 3, 4]</code>, <code>[2, 3]</code> is a subarray because the elements are consecutive.</p>
+<p><strong>Example:</strong> Consider the array:</p>
+
+<p style="text-align:center;">
+  <code>[1, 2, 3]</code>
+</p>
+
+<p>All possible <strong>non-empty subarrays</strong> are:</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;">
+  <li><code>[1]</code></li>
+  <li><code>[2]</code></li>
+  <li><code>[3]</code></li>
+  <li><code>[1, 2]</code></li>
+  <li><code>[2, 3]</code></li>
+  <li><code>[1, 2, 3]</code></li>
+</ul>
+
+<p>Notice that <code>[1, 3]</code> is <strong>not</strong> a subarray because <code>1</code> and <code>3</code> are not contiguous.</p>
 
 <p>For an array of size <em>n</em>, the total number of non-empty subarrays is:</p>
 
 <p style="text-align:center;">
   <strong>n × (n + 1) / 2</strong>
+</p>
+
+<p>For <code>n = 3</code>:</p>
+
+<p style="text-align:center;">
+  <strong>3 × 4 / 2 = 6</strong>
 </p>
 
 <p><strong>Common techniques:</strong></p>
@@ -231,22 +257,52 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li>🔹 Monotonic Queue / Deque</li>
 </ul>
 
-<h3>📌 Subsequence</h3>
+
+<!-- ==================== SUBSEQUENCE ==================== -->
+
+<h3>🔄 Subsequence</h3>
 
 <p>A <strong>subsequence</strong> is obtained by deleting zero or more elements from an array while maintaining the relative order of the remaining elements.</p>
 
-<p><strong>Example:</strong> For the array <code>[1, 2, 3, 4]</code>, <code>[1, 3, 4]</code> is a subsequence because the elements appear in the same relative order, even though they are not contiguous.</p>
+<p><strong>Example:</strong> Consider the array:</p>
 
-<p>For an array of size <em>n</em>, the total number of possible subsequences is:</p>
+<p style="text-align:center;">
+  <code>[1, 2, 3]</code>
+</p>
+
+<p>All possible <strong>subsequences</strong> are:</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;">
+  <li><code>[]</code></li>
+  <li><code>[1]</code></li>
+  <li><code>[2]</code></li>
+  <li><code>[3]</code></li>
+  <li><code>[1, 2]</code></li>
+  <li><code>[1, 3]</code></li>
+  <li><code>[2, 3]</code></li>
+  <li><code>[1, 2, 3]</code></li>
+</ul>
+
+<p>Notice that <code>[1, 3]</code> is a valid subsequence even though the elements are not contiguous.</p>
+
+<p>However, <code>[3, 1]</code> is <strong>not</strong> a subsequence because the original order of the elements is not preserved.</p>
+
+<p>For an array of size <em>n</em>, the total number of possible subsequences, including the empty subsequence, is:</p>
 
 <p style="text-align:center;">
   <strong>2<sup>n</sup></strong>
 </p>
 
-<p>For non-empty subsequences:</p>
+<p>For <code>n = 3</code>:</p>
 
 <p style="text-align:center;">
-  <strong>2<sup>n</sup> − 1</strong>
+  <strong>2<sup>3</sup> = 8</strong>
+</p>
+
+<p>If the empty subsequence is excluded:</p>
+
+<p style="text-align:center;">
+  <strong>2<sup>n</sup> − 1 = 7</strong>
 </p>
 
 <p><strong>Common techniques:</strong></p>
@@ -260,22 +316,50 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li>🔹 Bit Manipulation</li>
 </ul>
 
-<h3>📌 Subset</h3>
+
+<!-- ==================== SUBSET ==================== -->
+
+<h3>🧩 Subset</h3>
 
 <p>A <strong>subset</strong> is a collection of elements selected from a set where the order of elements does not matter.</p>
 
-<p><strong>Example:</strong> For the set <code>{1, 2, 3}</code>, <code>{1, 3}</code> is a subset. The order <code>{3, 1}</code> represents the same subset.</p>
+<p><strong>Example:</strong> Consider the set:</p>
 
-<p>For a set containing <em>n</em> distinct elements, the total number of subsets is:</p>
+<p style="text-align:center;">
+  <code>{1, 2, 3}</code>
+</p>
+
+<p>All possible <strong>subsets</strong> are:</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;">
+  <li><code>{}</code></li>
+  <li><code>{1}</code></li>
+  <li><code>{2}</code></li>
+  <li><code>{3}</code></li>
+  <li><code>{1, 2}</code></li>
+  <li><code>{1, 3}</code></li>
+  <li><code>{2, 3}</code></li>
+  <li><code>{1, 2, 3}</code></li>
+</ul>
+
+<p>In a subset, <code>{1, 3}</code> and <code>{3, 1}</code> represent the <strong>same subset</strong> because order does not matter.</p>
+
+<p>For a set containing <em>n</em> distinct elements, the total number of subsets, including the empty subset, is:</p>
 
 <p style="text-align:center;">
   <strong>2<sup>n</sup></strong>
 </p>
 
-<p>For non-empty subsets:</p>
+<p>For <code>n = 3</code>:</p>
 
 <p style="text-align:center;">
-  <strong>2<sup>n</sup> − 1</strong>
+  <strong>2<sup>3</sup> = 8</strong>
+</p>
+
+<p>If the empty subset is excluded:</p>
+
+<p style="text-align:center;">
+  <strong>2<sup>n</sup> − 1 = 7</strong>
 </p>
 
 <p><strong>Common techniques:</strong></p>
@@ -287,7 +371,10 @@ The Java Collections Framework provides a set of interfaces and classes for stor
   <li>🔹 Bitmasking</li>
 </ul>
 
+
+
 <p>👉 <strong>Rule:</strong> First identify whether the problem deals with a <strong>subarray, subsequence, or subset</strong>. Then choose the technique based on whether elements must be contiguous, whether their order matters, and the constraints on <em>n</em>.</p>
+
 
 
 </details>
