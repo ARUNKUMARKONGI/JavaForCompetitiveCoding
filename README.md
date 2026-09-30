@@ -52,7 +52,7 @@
 ---
 
 <details>
-<summary><h2 style="display:inline;">🛠️ Java Important Library Functions (Math, Strings, Arrays & Collections)</h2></summary>
+<summary><h3 style="display:inline;">🛠️ Java Important Library Functions (Math, Strings, Arrays & Collections)</h3></summary>
 <br>
 
 <p>Java library functions provide pre-built, optimized methods for common tasks, allowing you to solve problems faster and write cleaner code.</p>
@@ -78,7 +78,7 @@
 ---
 
 <details>
-<summary><h2 style="display:inline;">📊 Java Arrays</h2></summary>
+<summary><h3 style="display:inline;">📊 Java Arrays</h3></summary>
 <br>
 <p>Arrays are one of the most fundamental data structures in competitive coding. They allow you to store and efficiently access multiple values using an index.
 </p>
@@ -108,7 +108,7 @@
 ---
 
 <details>
-<summary><h2 style="display:inline;">🧰 Java Collections Framework</h2></summary>
+<summary><h3 style="display:inline;">🧰 Java Collections Framework</h3></summary>
 <br>
 
 <p>
@@ -157,7 +157,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <hr>
 
 <details> 
-<summary><h2 style="display:inline;">⏱️ Time and Space Complexity</h2></summary> 
+<summary><h3 style="display:inline;">⏱️ Time and Space Complexity</h3></summary> 
   <br> 
 <p>Time and space complexity are important because they help us understand how efficiently program performs as the input size grows.</p> 
 
@@ -194,7 +194,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 
 <details> 
-<summary><h2 style="display:inline;">🧱 Subarray, Subsequence and Subset</h2></summary> 
+<summary><h3 style="display:inline;">🧱 Subarray, Subsequence and Subset</h3></summary> 
   <br> 
 
 <p><strong>Subarray, subsequence, and subset</strong> are fundamental concepts in competitive programming. Understanding the difference between them is important because the techniques and algorithms used to solve problems can be very different.</p> 
@@ -374,7 +374,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <hr>
 
 <details>
-<summary><h2 style="display:inline;">🚀 Sliding Window, Prefix Sum and Two Pointers</h2></summary>
+<summary><h3 style="display:inline;">🚀 Sliding Window, Prefix Sum and Two Pointers</h3></summary>
 <br>
 
 <p>
