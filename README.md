@@ -822,7 +822,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 
 <details>
-<summary><h2 style="display:inline;">🔄 Functions and Recursion</h2></summary>
+<summary><h3 style="display:inline;">🔄 Functions and Recursion</h3></summary>
 <br>
 
 <p>
@@ -863,7 +863,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 </ul>
 
 
-<h3>🧩 Functions</h3>
+<h3>Functions</h3>
 
 <p>
   A <strong>function</strong> is a block of code designed to perform a specific
@@ -1001,7 +1001,7 @@ static int add(int a, int b) {
 </ul>
 
 
-<h4>🧮 Example: Factorial</h4>
+<h4>Example: Factorial</h4>
 
 <p>
   The factorial of a number <code>n</code> is:
@@ -1047,7 +1047,7 @@ static int add(int a, int b) {
 }</code></pre>
 
 
-<h4>🔍 How Recursion Works</h4>
+<h4>🔍How Recursion Works</h4>
 
 <p>
   Consider:
@@ -1132,7 +1132,7 @@ factorial(3)</code></pre>
 </p>
 
 
-<h3>🔢 Example: Sum of Numbers</h3>
+<h3>Example: Sum of Numbers</h3>
 
 <p>
   Find the sum of numbers from <code>1</code> to <code>n</code>.
@@ -1174,7 +1174,7 @@ factorial(3)</code></pre>
 }</code></pre>
 
 
-<h3>🔢 Example: Print Array Using Recursion</h3>
+<h3>Example: Print Array Using Recursion</h3>
 
 <p>
   Recursion can also be used to traverse an array.
@@ -1295,7 +1295,7 @@ factorial(3)</code></pre>
 </ul>
 
 
-<h3>⏱️ Time and Space Complexity</h3>
+<h3> Be Careful with Time and Space Complexity while working with recursion</h3>
 
 <p>
   The complexity of a recursive solution depends on the number of recursive
