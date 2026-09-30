@@ -189,5 +189,105 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 </p>
 </details>
 
+<hr>
 
 
+<details> 
+<summary><h2 style="display:inline;">🧱 Subarray, Subsequence and Subset</h2></summary> 
+  <br> 
+
+<p><strong>Subarray, subsequence, and subset</strong> are fundamental concepts in competitive programming. Understanding the difference between them is important because the techniques and algorithms used to solve problems can be very different.</p>
+
+<p>For competitive coding, understanding these concepts helps you:</p> 
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
+  <li style="margin-bottom:4px;">🧩 <strong>Identify the correct problem type</strong> — determine whether the problem is asking for a subarray, subsequence, or subset.</li> 
+  <li style="margin-bottom:4px;">⚡ <strong>Choose the right technique</strong> — such as Sliding Window, Two Pointers, Prefix Sum, Binary Search, Dynamic Programming, or Backtracking.</li> 
+  <li style="margin-bottom:4px;">🎯 <strong>Understand ordering requirements</strong> — know when elements must remain contiguous or preserve their original order.</li> 
+  <li style="margin-bottom:4px;">🚀 <strong>Optimize solutions</strong> — avoid generating all possible combinations when an efficient approach is available.</li> 
+  <li style="margin-bottom:4px;">🧠 <strong>Recognize common patterns</strong> — many array and string problems are based on these three concepts.</li> 
+</ul> 
+
+<h3>📌 Subarray</h3>
+
+<p>A <strong>subarray</strong> is a contiguous part of an array. All elements between the starting and ending positions are included.</p>
+
+<p><strong>Example:</strong> For the array <code>[1, 2, 3, 4]</code>, <code>[2, 3]</code> is a subarray because the elements are consecutive.</p>
+
+<p>For an array of size <em>n</em>, the total number of non-empty subarrays is:</p>
+
+<p style="text-align:center;">
+  <strong>n × (n + 1) / 2</strong>
+</p>
+
+<p><strong>Common techniques:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
+  <li>🔹 Prefix Sum</li>
+  <li>🔹 Sliding Window</li>
+  <li>🔹 Two Pointers</li>
+  <li>🔹 Kadane's Algorithm</li>
+  <li>🔹 Binary Search on Answer</li>
+  <li>🔹 Monotonic Queue / Deque</li>
+</ul>
+
+<h3>📌 Subsequence</h3>
+
+<p>A <strong>subsequence</strong> is obtained by deleting zero or more elements from an array while maintaining the relative order of the remaining elements.</p>
+
+<p><strong>Example:</strong> For the array <code>[1, 2, 3, 4]</code>, <code>[1, 3, 4]</code> is a subsequence because the elements appear in the same relative order, even though they are not contiguous.</p>
+
+<p>For an array of size <em>n</em>, the total number of possible subsequences is:</p>
+
+<p style="text-align:center;">
+  <strong>2<sup>n</sup></strong>
+</p>
+
+<p>For non-empty subsequences:</p>
+
+<p style="text-align:center;">
+  <strong>2<sup>n</sup> − 1</strong>
+</p>
+
+<p><strong>Common techniques:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
+  <li>🔹 Dynamic Programming</li>
+  <li>🔹 Two Pointers</li>
+  <li>🔹 Greedy</li>
+  <li>🔹 Binary Search</li>
+  <li>🔹 Recursion / Backtracking</li>
+  <li>🔹 Bit Manipulation</li>
+</ul>
+
+<h3>📌 Subset</h3>
+
+<p>A <strong>subset</strong> is a collection of elements selected from a set where the order of elements does not matter.</p>
+
+<p><strong>Example:</strong> For the set <code>{1, 2, 3}</code>, <code>{1, 3}</code> is a subset. The order <code>{3, 1}</code> represents the same subset.</p>
+
+<p>For a set containing <em>n</em> distinct elements, the total number of subsets is:</p>
+
+<p style="text-align:center;">
+  <strong>2<sup>n</sup></strong>
+</p>
+
+<p>For non-empty subsets:</p>
+
+<p style="text-align:center;">
+  <strong>2<sup>n</sup> − 1</strong>
+</p>
+
+<p><strong>Common techniques:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
+  <li>🔹 Bit Manipulation</li>
+  <li>🔹 Recursion / Backtracking</li>
+  <li>🔹 Dynamic Programming</li>
+  <li>🔹 Bitmasking</li>
+</ul>
+
+<p>👉 <strong>Rule:</strong> First identify whether the problem deals with a <strong>subarray, subsequence, or subset</strong>. Then choose the technique based on whether elements must be contiguous, whether their order matters, and the constraints on <em>n</em>.</p>
+
+
+</details>
