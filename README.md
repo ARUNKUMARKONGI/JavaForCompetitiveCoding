@@ -180,9 +180,9 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 <p>👉 <strong>Rule:</strong> In competitive coding, always consider both <strong>time complexity</strong> and <strong>space complexity</strong> before choosing an approach. Your approach must be efficient enough to satisfy the problem's time and memory limits.</p> 
 
-<h3>Reference Diagram <em>(Click image to view/download full resolution)</em></h3> 
-<a href="./images/TimeAndSpaceComplexity.png" target="_blank"> 
-  <img src="./images/TimeAndSpaceComplexity.png" alt="Time and Space Complexity Diagram" style="max-width:100%; height:auto; display:block; margin:10px 0;"/> 
+<h3>Reference PDF <em>(Click to Download)</em></h3> 
+<a href="./images/timecomplexity.pdf" target="_blank"> 
+  <img src="./images/timecomplexity.pdf" alt="Time and Space Complexity Diagram" style="max-width:100%; height:auto; display:block; margin:10px 0;"/> 
 </a> 
 </details>
 
