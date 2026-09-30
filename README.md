@@ -816,6 +816,513 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 </ul>
 
+</details>
+<hr>
+
+
+
+<details>
+<summary><h2 style="display:inline;">🔄 Functions and Recursion</h2></summary>
+<br>
+
+<p>
+  <strong>Functions and Recursion</strong> are fundamental programming concepts
+  used to organize code, avoid repetition, and solve problems by breaking them
+  into smaller parts.
+</p>
+
+<p>
+  In competitive programming, functions help us write
+  <strong>reusable and modular code</strong>, while recursion is especially
+  useful for problems involving trees, graphs, backtracking, divide and conquer,
+  and repeated subproblems.
+</p>
+
+<p>Understanding these concepts helps you:</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🧩 <strong>Break a problem into smaller parts</strong> — divide a large problem into manageable functions.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    ♻️ <strong>Reuse code</strong> — write a function once and call it multiple times.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🎯 <strong>Improve readability</strong> — separate different parts of the solution into meaningful functions.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔄 <strong>Solve repetitive problems</strong> — recursion allows a function to call itself on smaller inputs.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🚀 <strong>Recognize problem patterns</strong> — recursion is commonly used in trees, backtracking, divide and conquer, and dynamic programming.
+  </li>
+</ul>
+
+
+<h3>🧩 Functions</h3>
+
+<p>
+  A <strong>function</strong> is a block of code designed to perform a specific
+  task. Instead of writing the same code repeatedly, we can place it inside a
+  function and call it whenever required.
+</p>
+
+<p><strong>Basic Java syntax:</strong></p>
+
+<pre><code>returnType functionName(parameters) {
+    // statements
+    return value;
+}</code></pre>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>static int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+<p>
+  The function above takes two integers as input and returns their sum.
+</p>
+
+<p><strong>Calling the function:</strong></p>
+
+<pre><code>int result = add(10, 20);
+
+System.out.println(result);</code></pre>
+
+<p>
+  Output:
+</p>
+
+<p style="text-align:center;">
+  <strong><code>30</code></strong>
+</p>
+
+
+<h4>📌 Parts of a Function</h4>
+
+<p>Consider:</p>
+
+<pre><code>static int multiply(int a, int b) {
+    return a * b;
+}</code></pre>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🔹 <strong>static</strong> — allows the method to be called without creating an object.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔹 <strong>int</strong> — return type of the function.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔹 <strong>multiply</strong> — function/method name.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔹 <strong>int a, int b</strong> — parameters.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔹 <strong>return a * b</strong> — value returned by the function.
+  </li>
+</ul>
+
+
+<h4>🔢 Types of Functions</h4>
+
+<p>Functions can be categorized based on whether they take parameters and return a value.</p>
+
+<ol style="margin-top:0; margin-bottom:12px; padding-left:35px;">
+  <li style="margin-bottom:6px;">
+    <strong>No parameters, no return value</strong>
+  </li>
+
+  <li style="margin-bottom:6px;">
+    <strong>Parameters, no return value</strong>
+  </li>
+
+  <li style="margin-bottom:6px;">
+    <strong>No parameters, returns a value</strong>
+  </li>
+
+  <li style="margin-bottom:6px;">
+    <strong>Parameters and returns a value</strong>
+  </li>
+</ol>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>// No parameter, no return value
+static void greet() {
+    System.out.println("Hello");
+}
+
+// Parameters, no return value
+static void printSum(int a, int b) {
+    System.out.println(a + b);
+}
+
+// No parameter, returns a value
+static int getNumber() {
+    return 10;
+}
+
+// Parameters and returns a value
+static int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+
+<h3>🔄 Recursion</h3>
+
+<p>
+  <strong>Recursion</strong> is a technique in which a function calls itself
+  to solve a smaller version of the same problem.
+</p>
+
+<p>
+  A recursive solution generally contains two important parts:
+</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🛑 <strong>Base Case</strong> — the condition that stops the recursion.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔄 <strong>Recursive Case</strong> — the function calls itself with a smaller or simpler input.
+  </li>
+</ul>
+
+
+<h4>🧮 Example: Factorial</h4>
+
+<p>
+  The factorial of a number <code>n</code> is:
+</p>
+
+<p style="text-align:center;">
+  <strong>n! = n × (n − 1) × (n − 2) × ... × 1</strong>
+</p>
+
+<p>For example:</p>
+
+<p style="text-align:center;">
+  <strong>5! = 5 × 4 × 3 × 2 × 1 = 120</strong>
+</p>
+
+<p>
+  We can express factorial recursively as:
+</p>
+
+<p style="text-align:center;">
+  <strong>n! = n × (n − 1)!</strong>
+</p>
+
+<p>
+  The base case is:
+</p>
+
+<p style="text-align:center;">
+  <strong>0! = 1</strong>
+</p>
+
+<p><strong>Recursive implementation:</strong></p>
+
+<pre><code>static int factorial(int n) {
+
+    // Base Case
+    if (n == 0) {
+        return 1;
+    }
+
+    // Recursive Case
+    return n * factorial(n - 1);
+}</code></pre>
+
+
+<h4>🔍 How Recursion Works</h4>
+
+<p>
+  Consider:
+</p>
+
+<pre><code>factorial(5)</code></pre>
+
+<p>The calls are:</p>
+
+<p style="text-align:center;">
+  <code>factorial(5)</code>
+  <br>
+  ↓
+  <br>
+  <code>5 × factorial(4)</code>
+  <br>
+  ↓
+  <br>
+  <code>5 × 4 × factorial(3)</code>
+  <br>
+  ↓
+  <br>
+  <code>5 × 4 × 3 × factorial(2)</code>
+  <br>
+  ↓
+  <br>
+  <code>5 × 4 × 3 × 2 × factorial(1)</code>
+  <br>
+  ↓
+  <br>
+  <code>5 × 4 × 3 × 2 × 1 × factorial(0)</code>
+</p>
+
+<p>
+  At <code>factorial(0)</code>, the base case returns <code>1</code>.
+  The pending function calls then return in reverse order.
+</p>
+
+<p style="text-align:center;">
+  <code>1 → 1 → 2 → 6 → 24 → 120</code>
+</p>
+
+
+<h3>📚 Recursion and the Call Stack</h3>
+
+<p>
+  Every function call is stored in the program's
+  <strong>call stack</strong> until the function finishes execution.
+</p>
+
+<p>
+  For:
+</p>
+
+<pre><code>factorial(3)</code></pre>
+
+<p>The stack grows like:</p>
+
+<pre><code>factorial(3)
+    ↓
+factorial(2)
+    ↓
+factorial(1)
+    ↓
+factorial(0)</code></pre>
+
+<p>
+  Once the base case is reached, the calls are completed in reverse order:
+</p>
+
+<pre><code>factorial(0)
+    ↑
+factorial(1)
+    ↑
+factorial(2)
+    ↑
+factorial(3)</code></pre>
+
+<p>
+  Therefore, recursion uses additional memory for the
+  <strong>call stack</strong>.
+</p>
+
+
+<h3>🔢 Example: Sum of Numbers</h3>
+
+<p>
+  Find the sum of numbers from <code>1</code> to <code>n</code>.
+</p>
+
+<p>
+  For <code>n = 5</code>:
+</p>
+
+<p style="text-align:center;">
+  <strong>1 + 2 + 3 + 4 + 5 = 15</strong>
+</p>
+
+<p>
+  We can define:
+</p>
+
+<p style="text-align:center;">
+  <strong>sum(n) = n + sum(n − 1)</strong>
+</p>
+
+<p>
+  with the base case:
+</p>
+
+<p style="text-align:center;">
+  <strong>sum(0) = 0</strong>
+</p>
+
+<pre><code>static int sum(int n) {
+
+    // Base Case
+    if (n == 0) {
+        return 0;
+    }
+
+    // Recursive Case
+    return n + sum(n - 1);
+}</code></pre>
+
+
+<h3>🔢 Example: Print Array Using Recursion</h3>
+
+<p>
+  Recursion can also be used to traverse an array.
+</p>
+
+<pre><code>static void printArray(int[] arr, int index) {
+
+    // Base Case
+    if (index == arr.length) {
+        return;
+    }
+
+    System.out.println(arr[index]);
+
+    // Recursive Case
+    printArray(arr, index + 1);
+}</code></pre>
+
+<p>
+  For:
+</p>
+
+<p style="text-align:center;">
+  <code>[10, 20, 30, 40]</code>
+</p>
+
+<p>
+  The recursive calls are:
+</p>
+
+<p style="text-align:center;">
+  <code>index = 0 → 1 → 2 → 3 → 4</code>
+</p>
+
+<p>
+  When <code>index == arr.length</code>, the recursion stops.
+</p>
+
+
+<h3>🔁 Recursion with Multiple Calls</h3>
+
+<p>
+  A function can also make more than one recursive call.
+  This creates a <strong>recursion tree</strong>.
+</p>
+
+<p><strong>Example: Fibonacci</strong></p>
+
+<p style="text-align:center;">
+  <strong>F(n) = F(n − 1) + F(n − 2)</strong>
+</p>
+
+<p>with:</p>
+
+<p style="text-align:center;">
+  <strong>F(0) = 0</strong>
+  &nbsp;&nbsp;&nbsp;
+  <strong>F(1) = 1</strong>
+</p>
+
+<pre><code>static int fibonacci(int n) {
+
+    if (n &lt;= 1) {
+        return n;
+    }
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}</code></pre>
+
+<p>
+  This simple recursive implementation has overlapping subproblems and becomes
+  inefficient for larger values of <code>n</code>. This is one reason
+  <strong>Dynamic Programming</strong> is often used to optimize recursive solutions.
+</p>
+
+
+<h3>🧠 Recursion in Competitive Programming</h3>
+
+<p>Recursion is commonly used for:</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li>🔹 Tree Traversals</li>
+  <li>🔹 Graph DFS</li>
+  <li>🔹 Backtracking</li>
+  <li>🔹 Generate Subsets</li>
+  <li>🔹 Generate Subsequences</li>
+  <li>🔹 Generate Permutations</li>
+  <li>🔹 Divide and Conquer</li>
+  <li>🔹 Binary Search</li>
+  <li>🔹 Merge Sort</li>
+  <li>🔹 Quick Sort</li>
+  <li>🔹 Dynamic Programming</li>
+</ul>
+
+
+<h3>⚠️ Important Points</h3>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🛑 <strong>Always define a base case</strong> to stop the recursion.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    📉 <strong>Move toward the base case</strong> with every recursive call.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    💾 <strong>Consider stack space</strong> because every recursive call uses call-stack memory.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    ⚠️ <strong>Deep recursion</strong> can cause <code>StackOverflowError</code> in Java.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🚀 <strong>Optimize repeated subproblems</strong> using techniques such as Dynamic Programming when necessary.
+  </li>
+</ul>
+
+
+<h3>⏱️ Time and Space Complexity</h3>
+
+<p>
+  The complexity of a recursive solution depends on the number of recursive
+  calls and the amount of work performed at each call.
+</p>
+
+<p><strong>Example:</strong> Factorial</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🔹 <strong>Time:</strong> <code>O(n)</code>
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔹 <strong>Auxiliary Space:</strong> <code>O(n)</code> due to the call stack.
+  </li>
+</ul>
+
+<p><strong>Rule:</strong></p>
+
+<p>
+  👉 Before writing a recursive solution, identify the
+  <strong>base case</strong>, determine the <strong>smaller subproblem</strong>,
+  and understand how the current answer is built from the recursive result.
+</p>
+
+
 
 
 </details>
