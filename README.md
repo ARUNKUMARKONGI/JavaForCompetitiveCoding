@@ -200,7 +200,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 <p>For competitive coding, understanding these concepts helps you:</p> 
 
-<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px;"> 
   <li style="margin-bottom:6px;">🧩 <strong>Identify the correct problem type</strong> determine whether the problem is asking for a subarray, subsequence, or subset.</li> 
   <li style="margin-bottom:6px;">⚡ <strong>Choose the right technique</strong> such as Sliding Window, Two Pointers, Prefix Sum, Binary Search, Dynamic Programming or Backtracking.</li> 
   <li style="margin-bottom:6px;">🎯 <strong>Understand ordering requirements</strong> know when elements must remain contiguous or preserve their original order.</li> 
