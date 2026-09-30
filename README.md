@@ -370,3 +370,477 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 <p>👉 <strong>Rule:</strong> First identify whether the problem deals with a <strong>subarray, subsequence, or subset</strong>. Then choose the technique based on whether elements must be contiguous, whether their order matters, and the constraints on <em>n</em>.</p>
 
 </details>
+
+<hr>
+
+<details>
+<summary><h2 style="display:inline;">🚀 Sliding Window, Prefix Sum and Two Pointers</h2></summary>
+<br>
+
+<p>
+  <strong>Sliding Window, Prefix Sum, and Two Pointers</strong> are common problem-solving techniques used extensively in array and string problems.
+  Choosing the correct technique can help reduce a solution from <code>O(n²)</code> or <code>O(n³)</code> to <code>O(n)</code> or <code>O(n log n)</code>.
+</p>
+
+<p>Understanding these techniques helps you:</p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🧩 <strong>Identify the problem pattern</strong> — determine whether the problem involves a continuous range, cumulative values, or a pair of elements.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    ⚡ <strong>Reduce time complexity</strong> — avoid repeatedly scanning the same elements.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🎯 <strong>Choose the correct technique</strong> — Sliding Window, Prefix Sum, or Two Pointers based on the problem constraints.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🚀 <strong>Optimize brute-force solutions</strong> — transform repeated calculations into efficient linear or near-linear approaches.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🧠 <strong>Recognize common patterns</strong> — these techniques appear frequently in competitive programming, DSA, and coding interviews.
+  </li>
+</ul>
+
+
+<h3>Sliding Window</h3>
+
+<p>
+  <strong>Sliding Window</strong> is a technique used to process a contiguous portion of an array or string while efficiently moving the range from left to right.
+</p>
+
+<p>
+  Instead of recalculating the result for every possible subarray, we maintain a
+  <strong>window</strong> using two boundaries, usually represented by
+  <code>left</code> and <code>right</code>.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p style="text-align:center;">
+  <code>[1, 2, 3, 4, 5]</code>
+</p>
+
+<p>
+  Suppose we want the sum of every subarray of size <code>3</code>.
+</p>
+
+<p style="text-align:center;">
+  <code>[1, 2, 3]</code> → sum = <strong>6</strong>
+</p>
+
+<p>
+  Instead of calculating the next window from scratch:
+</p>
+
+<p style="text-align:center;">
+  <code>[2, 3, 4]</code> → <strong>2 + 3 + 4 = 9</strong>
+</p>
+
+<p>
+  We remove the element leaving the window and add the new element:
+</p>
+
+<p style="text-align:center;">
+  <strong>6 − 1 + 4 = 9</strong>
+</p>
+
+<p>
+  This allows each element to be processed only a small number of times.
+</p>
+
+<p><strong>Common types:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li>🔹 Fixed-size Sliding Window</li>
+  <li>🔹 Variable-size Sliding Window</li>
+  <li>🔹 Sliding Window with Frequency Map</li>
+  <li>🔹 Sliding Window with Two Pointers</li>
+</ul>
+
+<p><strong>Common problems:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li>Maximum/minimum sum subarray of size <code>k</code></li>
+  <li>Longest substring with a given condition</li>
+  <li>Shortest subarray satisfying a condition</li>
+  <li>Number of distinct elements in a window</li>
+  <li>Maximum number of elements satisfying a constraint</li>
+</ul>
+
+<p><strong>Typical complexity:</strong></p>
+
+<p style="text-align:center;">
+  <strong>O(n)</strong> time and <strong>O(1)</strong> or <strong>O(k)</strong> auxiliary space depending on the problem.
+</p>
+
+
+<h3>➕ Prefix Sum</h3>
+
+<p>
+  <strong>Prefix Sum</strong> is a technique used to preprocess an array so that
+  the sum of elements in any range can be calculated efficiently.
+</p>
+
+<p>
+  The first step is to create a <strong>prefix sum array</strong>.
+  Each element of the prefix array stores the sum of all elements from the
+  beginning of the original array up to that index.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p style="text-align:center;">
+  <code>arr = [1, 2, 3, 4, 5]</code>
+</p>
+
+<p>
+  We create a prefix array <code>prefix</code> of the same size:
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [_, _, _, _, _]</code>
+</p>
+
+<p><strong>Step 1:</strong> First element:</p>
+
+<p style="text-align:center;">
+  <code>prefix[0] = arr[0] = 1</code>
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [1, _, _, _, _]</code>
+</p>
+
+<p><strong>Step 2:</strong> Add the current element to the previous prefix sum:</p>
+
+<p style="text-align:center;">
+  <code>prefix[1] = prefix[0] + arr[1]</code>
+  <br>
+  <strong>= 1 + 2 = 3</strong>
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [1, 3, _, _, _]</code>
+</p>
+
+<p><strong>Step 3:</strong></p>
+
+<p style="text-align:center;">
+  <code>prefix[2] = prefix[1] + arr[2]</code>
+  <br>
+  <strong>= 3 + 3 = 6</strong>
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [1, 3, 6, _, _]</code>
+</p>
+
+<p><strong>Step 4:</strong></p>
+
+<p style="text-align:center;">
+  <code>prefix[3] = prefix[2] + arr[3]</code>
+  <br>
+  <strong>= 6 + 4 = 10</strong>
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [1, 3, 6, 10, _]</code>
+</p>
+
+<p><strong>Step 5:</strong></p>
+
+<p style="text-align:center;">
+  <code>prefix[4] = prefix[3] + arr[4]</code>
+  <br>
+  <strong>= 10 + 5 = 15</strong>
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [1, 3, 6, 10, 15]</code>
+</p>
+
+<p>
+  Therefore, the final prefix sum array is:
+</p>
+
+<p style="text-align:center;">
+  <strong><code>[1, 3, 6, 10, 15]</code></strong>
+</p>
+
+<p>
+  The general formula is:
+</p>
+
+<p style="text-align:center;">
+  <strong>prefix[i] = prefix[i - 1] + arr[i]</strong>
+</p>
+
+<p>
+  So each prefix value represents the sum from index <code>0</code> to index
+  <code>i</code>.
+</p>
+
+<p style="text-align:center;">
+  <code>prefix[2] = 1 + 2 + 3 = 6</code>
+  <br>
+  <code>prefix[4] = 1 + 2 + 3 + 4 + 5 = 15</code>
+</p>
+
+
+<h4>📌 Range Sum Using Prefix Sum</h4>
+
+<p>
+  Once the prefix array is created, we can calculate the sum of any
+  <strong>contiguous range</strong> efficiently.
+</p>
+
+<p>
+  Consider the same array:
+</p>
+
+<p style="text-align:center;">
+  <code>arr = [1, 2, 3, 4, 5]</code>
+</p>
+
+<p>
+  and its prefix array:
+</p>
+
+<p style="text-align:center;">
+  <code>prefix = [1, 3, 6, 10, 15]</code>
+</p>
+
+<p>
+  Suppose we want to find the sum of the elements from index
+  <code>1</code> to index <code>3</code>:
+</p>
+
+<p style="text-align:center;">
+  <code>[2, 3, 4]</code>
+</p>
+
+<p>
+  Direct calculation gives:
+</p>
+
+<p style="text-align:center;">
+  <strong>2 + 3 + 4 = 9</strong>
+</p>
+
+<p>
+  Using the prefix array, we already know:
+</p>
+
+<p style="text-align:center;">
+  <code>prefix[3] = 1 + 2 + 3 + 4 = 10</code>
+</p>
+
+<p>
+  But this also includes the element before our range:
+</p>
+
+<p style="text-align:center;">
+  <code>arr[0] = 1</code>
+</p>
+
+<p>
+  So we subtract <code>prefix[0]</code>:
+</p>
+
+<p style="text-align:center;">
+  <strong>Range Sum(1, 3) = prefix[3] − prefix[0]</strong>
+</p>
+
+<p style="text-align:center;">
+  <strong>= 10 − 1 = 9</strong>
+</p>
+
+<p>
+  Therefore:
+</p>
+
+<p style="text-align:center;">
+  <strong>Sum of indices [1, 3] = 9</strong>
+</p>
+
+
+<h4>📐 General Range Formula</h4>
+
+<p>
+  For a range <code>[l, r]</code>:
+</p>
+
+<p style="text-align:center;">
+  <strong>
+    Sum(l, r) = prefix[r] − prefix[l − 1]
+  </strong>
+</p>
+
+<p>
+  However, when <code>l = 0</code>, there is no element before the range.
+  Therefore:
+</p>
+
+<p style="text-align:center;">
+  <strong>
+    Sum(0, r) = prefix[r]
+  </strong>
+</p>
+
+<p><strong>Example:</strong> Find the sum from index <code>0</code> to <code>3</code>:</p>
+
+<p style="text-align:center;">
+  <code>1 + 2 + 3 + 4 = 10</code>
+</p>
+
+<p style="text-align:center;">
+  <strong>Sum(0, 3) = prefix[3] = 10</strong>
+</p>
+
+
+<h4>⚡ Prefix Sum Construction</h4>
+
+<p>
+  The prefix array can be created in <strong>O(n)</strong> time:
+</p>
+
+<pre><code>int[] prefix = new int[arr.length];
+
+prefix[0] = arr[0];
+
+for (int i = 1; i &lt; arr.length; i++) {
+    prefix[i] = prefix[i - 1] + arr[i];
+}</code></pre>
+
+<p>
+  After preprocessing, each range-sum query can be answered in
+  <strong>O(1)</strong> time.
+</p>
+
+<p><strong>Common applications:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li>🔹 Range Sum Queries</li>
+  <li>🔹 Subarray Sum Problems</li>
+  <li>🔹 Prefix Sum + HashMap</li>
+  <li>🔹 Counting elements in a range</li>
+</ul>
+
+
+<h3>Two Pointers</h3>
+
+<p>
+  <strong>Two Pointers</strong> is a technique where two indices are used to traverse an array or string efficiently.
+  The pointers are commonly called <code>left</code> and <code>right</code>.
+</p>
+
+<p>
+  The pointers may move toward each other, move in the same direction, or represent the boundaries of a range.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p style="text-align:center;">
+  <code>arr = [1, 2, 3, 4, 6]</code>
+</p>
+
+<p>
+  Suppose the array is sorted and we want to find whether two elements have a sum equal to <code>6</code>.
+</p>
+
+<p style="text-align:center;">
+  <code>left = 0</code>, &nbsp; <code>right = 4</code>
+</p>
+
+<p>
+  Calculate:
+</p>
+
+<p style="text-align:center;">
+  <code>arr[left] + arr[right] = 1 + 6 = 7</code>
+</p>
+
+<p>
+  Since the sum is greater than <code>6</code>, move the <code>right</code> pointer left.
+</p>
+
+<p style="text-align:center;">
+  <code>1 + 4 = 5</code>
+</p>
+
+<p>
+  Now the sum is smaller than <code>6</code>, so move the <code>left</code> pointer right.
+</p>
+
+<p style="text-align:center;">
+  <code>2 + 4 = 6</code>
+</p>
+
+<p>
+  The required pair is found.
+</p>
+
+<p><strong>Common patterns:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li>🔹 Opposite-direction pointers</li>
+  <li>🔹 Same-direction pointers</li>
+  <li>🔹 Fast and Slow pointers</li>
+  <li>🔹 Two pointers for sorted arrays</li>
+  <li>🔹 Two pointers for removing duplicates</li>
+  <li>🔹 Two pointers for partitioning</li>
+</ul>
+
+<p><strong>Common problems:</strong></p>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li>Two Sum in a sorted array</li>
+  <li>Three Sum</li>
+  <li>Remove duplicates from a sorted array</li>
+  <li>Container With Most Water</li>
+  <li>Palindrome checking</li>
+  <li>Partitioning problems</li>
+</ul>
+
+<p><strong>Typical complexity:</strong></p>
+
+<p style="text-align:center;">
+  <strong>O(n)</strong> time with <strong>O(1)</strong> auxiliary space for many two-pointer problems.
+</p>
+
+
+<h3>How to Choose the Technique?</h3>
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
+  <li style="margin-bottom:6px;">
+    🪟 <strong>Sliding Window</strong> — use when dealing with a <strong>contiguous range</strong> that needs to expand, shrink, or move.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    ➕ <strong>Prefix Sum</strong> — use when you need to answer <strong>multiple range-sum queries</strong> or efficiently calculate cumulative values.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    👉 <strong>Two Pointers</strong> — use when two indices can traverse the array efficiently, especially with <strong>sorted arrays</strong> or pair/range problems.
+  </li>
+
+  <li style="margin-bottom:6px;">
+    🔥 <strong>Combination</strong> — many problems can combine these techniques, such as <strong>Prefix Sum + HashMap</strong> or <strong>Sliding Window + Frequency Map</strong>.
+  </li>
+</ul>
+
+
+<p>
+  👉 <strong>Rule:</strong> First identify whether the problem involves a
+  <strong>contiguous window</strong>, <strong>cumulative information</strong>,
+  or <strong>multiple pointers</strong>. Then choose the technique that avoids
+  unnecessary repeated work.
+</p>
+
+
+</details>
