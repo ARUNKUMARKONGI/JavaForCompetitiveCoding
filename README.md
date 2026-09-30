@@ -822,7 +822,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 
 <details>
-<summary><h3 style="display:inline;">🔄 Functions and Recursion</h3></summary>
+<summary><h3 style="display:inline;">⚙️ Functions and Recursion</h3></summary>
 <br>
 
 <p>
@@ -1256,17 +1256,17 @@ factorial(3)</code></pre>
 <p>Recursion is commonly used for:</p>
 
 <ul style="margin-top:0; margin-bottom:12px; padding-left:25px; list-style-position:outside;">
-  <li>🔹 Tree Traversals</li>
-  <li>🔹 Graph DFS</li>
-  <li>🔹 Backtracking</li>
-  <li>🔹 Generate Subsets</li>
-  <li>🔹 Generate Subsequences</li>
-  <li>🔹 Generate Permutations</li>
-  <li>🔹 Divide and Conquer</li>
-  <li>🔹 Binary Search</li>
-  <li>🔹 Merge Sort</li>
-  <li>🔹 Quick Sort</li>
-  <li>🔹 Dynamic Programming</li>
+  <li>Tree Traversals</li>
+  <li>Graph DFS</li>
+  <li>Backtracking</li>
+  <li>Generate Subsets</li>
+  <li>Generate Subsequences</li>
+  <li>Generate Permutations</li>
+  <li>Divide and Conquer</li>
+  <li>Binary Search</li>
+  <li>Merge Sort</li>
+  <li>Quick Sort</li>
+  <li>Dynamic Programming</li>
 </ul>
 
 
