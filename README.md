@@ -1,5 +1,3 @@
-# Java for Competitive Programming
-<br>
 <details>
 <meta name="google-site-verification" content="A15hghSg-FVv1AkZxRY9xrm3MW-vENzOoi7ZMPfStmw" />
 <summary><h3 style="display:inline;">🔣 Data Types, Conditional Stmts, Operators and Loops</h3></summary>
