@@ -184,7 +184,7 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 <p>
   <a href="./images/timecomplexity.pdf" target="_blank">
-    📥 <strong>Click here to view/download the detailed PDF</strong>
+    📥 <strong>Click here to view/download</strong>
   </a>
 </p>
 </details>
