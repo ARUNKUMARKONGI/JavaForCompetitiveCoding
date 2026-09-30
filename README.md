@@ -829,9 +829,6 @@ for (int i = 1; i &lt; arr.length; i++) {
     👉 <strong>Two Pointers</strong> — use when two indices can traverse the array efficiently, especially with <strong>sorted arrays</strong> or pair/range problems.
   </li>
 
-  <li style="margin-bottom:6px;">
-    🔥 <strong>Combination</strong> — many problems can combine these techniques, such as <strong>Prefix Sum + HashMap</strong> or <strong>Sliding Window + Frequency Map</strong>.
-  </li>
 </ul>
 
 
