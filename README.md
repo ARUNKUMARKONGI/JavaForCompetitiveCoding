@@ -894,14 +894,6 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 
 System.out.println(result);</code></pre>
 
-<p>
-  Output:
-</p>
-
-<p style="text-align:center;">
-  <strong><code>30</code></strong>
-</p>
-
 
 <h4>📌 Parts of a Function</h4>
 
