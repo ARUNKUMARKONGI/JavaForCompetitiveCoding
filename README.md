@@ -153,7 +153,38 @@ The Java Collections Framework provides a set of interfaces and classes for stor
 </a>
 
 </details>
+<hr>
 
+<details> 
+<summary><h2 style="display:inline;">⏱️ Time and Space Complexity</h2></summary> 
+  <br> 
+<p>Time and space complexity are important because they help us understand how efficiently program performs as the input size grows.</p> 
+
+<p>For competitive coding, understanding complexity helps you:</p> 
+
+<ul style="margin-top:0; margin-bottom:12px; padding-left:20px;"> 
+  <li style="margin-bottom:4px;">⚡ <strong>Choose efficient logic</strong> — avoid solutions that become too slow for large inputs.</li> 
+  <li style="margin-bottom:4px;">⏳ <strong>Estimate execution time</strong> — understand how the number of operations grows with input size.</li> 
+  <li style="margin-bottom:4px;">💾 <strong>Manage memory efficiently</strong> — choose solutions that fit within the available memory limit.</li> 
+  <li style="margin-bottom:4px;">🎯 <strong>Match problem constraints</strong> — select an algorithm based on the maximum possible input size.</li> 
+  <li style="margin-bottom:4px;">🧩 <strong>Compare different approaches</strong> — determine which approach scales better as the input grows.</li> 
+</ul> 
+
+<p><strong>Time Complexity:</strong> describes how the running time or number of operations of an algorithm grows with respect to the input size <em>n</em>.</p>
+
+<p><strong>Space Complexity:</strong> describes how much additional memory an algorithm requires as the input size <em>n</em> grows.</p>
+
+<p><strong>Example:</strong> If an algorithm checks every element of an array once, it performs approximately <em>n</em> operations, giving it <code>O(n)</code> time complexity. If another algorithm uses a nested loop to compare every pair of elements, it may perform approximately <em>n × n</em> operations, giving it <code>O(n²)</code> time complexity.</p>
+
+<p>Similarly, if an algorithm creates an additional array of size <em>n</em>, its extra space requirement is <code>O(n)</code>.</p>
+
+<p>👉 <strong>Rule:</strong> In competitive coding, always consider both <strong>time complexity</strong> and <strong>space complexity</strong> before choosing an approach. Your approach must be efficient enough to satisfy the problem's time and memory limits.</p> 
+
+<h3>Reference Diagram <em>(Click image to view/download full resolution)</em></h3> 
+<a href="./images/TimeAndSpaceComplexity.png" target="_blank"> 
+  <img src="./images/TimeAndSpaceComplexity.png" alt="Time and Space Complexity Diagram" style="max-width:100%; height:auto; display:block; margin:10px 0;"/> 
+</a> 
+</details>
 
 
 
