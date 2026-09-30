@@ -1677,7 +1677,7 @@ Example:
 For positive integers:
 </p>
 
-<pre><code>n &gt;&gt; k = floor(n / 2^k)</code></pre>
+<pre><code>n &gt;&gt; k = n / 2^k</code></pre>
 
 <p>
 Example:
@@ -1691,7 +1691,7 @@ Example:
 
 <hr>
 
-<h3>🔄 XOR Properties</h3>
+<h3>XOR Properties</h3>
 
 <p>
 XOR is one of the most important operators in competitive programming.
@@ -1721,7 +1721,7 @@ The two occurrences of <code>5</code> cancel each other.
 
 <hr>
 
-<h3>🎯 Technique 1: Count Set Bits</h3>
+<h3>Technique 1: Count Set Bits</h3>
 
 <p>
 A <strong>set bit</strong> is a bit whose value is <code>1</code>.
@@ -1751,7 +1751,7 @@ Therefore, repeatedly applying this operation allows us to count the number of s
 
 <hr>
 
-<h3>🧩 Technique 2: Find the Unique Element Using XOR</h3>
+<h3>Technique 2: Find the Unique Element Using XOR</h3>
 
 <p>
 If every element appears exactly twice except one element, XOR can find the unique element.
