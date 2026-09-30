@@ -1331,18 +1331,6 @@ Since integers are stored in binary form, bit manipulation allows us to perform
 many operations efficiently and faster compared to arithmetic operations.
 </p>
 
-<p>
-For example:
-</p>
-
-<pre><code>5 = 101
-3 = 011</code></pre>
-
-<p>
-Bitwise operations work directly on these binary representations.
-</p>
-
-<hr>
 
 <h3>⚙️ Bitwise Operators in Java</h3>
 
